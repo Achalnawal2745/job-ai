@@ -1,0 +1,52 @@
+team_name: "Nexus Ai"
+
+primary_contact:
+  name: "Achal Nawal"
+  email: "anawal_be23@thapar.edu"
+  phone: "6367157965"
+
+team_members:
+    name: "Aastha Mahajan"
+    email: "amahajan_be24@thapar.edu"
+    role: "ML Engineer"
+
+    name: "Aastha Mahajan"
+    email: "amahajan_be24@thapar.edu"
+    role: "AI/ML Engineer"
+
+github_repo: "https://github.com/YOUR_USERNAME/job-ai"
+sandbox_link:"https://colab.research.google.com/drive/1obxTmJ8eSemCe2mqo3Z_bacIpiINLx5n?usp=sharing"
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./Nexus_Ai.csv"
+
+compute:
+  platform: "Local Windows PC"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.14.0"
+  os: "Windows 11"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+ai_tools_used:
+  - "Claude"
+
+ai_usage_summary: |
+  Used Claude for architecture discussion, design decisions, debugging, and optimizations.
+
+methodology_summary: |
+  Multi-signal hybrid ranker combining TF-IDF semantic similarity (22%), hard skill
+scoring (26%), nice-to-have skill matching (10%), career trajectory (18%), experience
+fit (8%), location match (5%), education (3%), and engagement quality (8%). Availability
+is applied as a multiplicative multiplier (0–1.2×) on the final score. Features include
+pre-computed candidate text caches, startup founding-date honeypot detection, and
+LangChain-only / consulting-heavy disqualifiers. Offline CPU sandbox compliant, no
+network access during ranking.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
